@@ -20,17 +20,16 @@ const MatchedPage = () => {
       </div>
 
       <div className="main-content">
+        <h1 className="title">Matched Users</h1>
         <div className="item-list">
           {matchedItems.map((item, index) => (
             <div key={index} className="item-tile">
-              <div className="item-title" key={index}><b>
-              {item}
-              </b>
+              <a href={`#matchedItem${index + 1}`}>{item}</a>
               <br />
-              <p className="title">Description</p>
+              <p className="desc">Description</p>
               <br />
               <button onClick={() => handleChatButtonClick(`#matchedItem${index + 1}`)}>Chat</button>
-              </div>
+
             </div>
           ))}
         </div>
